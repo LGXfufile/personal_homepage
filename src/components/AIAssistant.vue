@@ -1,13 +1,19 @@
 <template>
   <div class="ai-assistant">
     <div class="content-card">
-      <h1 class="title">你好，我是<span class="highlight">媛飞飞</span></h1>
-      <p class="subtitle">我是余杭区第一不剩博主，欢迎来挑战我哦~</p>
-      <p class="description">24小时在线，为您解答各种问题</p>
-      <button class="start-chat">
-        <span class="button-text">开始对话</span>
-        <span class="button-icon">→</span>
-      </button>
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h1 class="title">智能AI助手</h1>
+          <p class="description">24小时在线，为您解答各种问题</p>
+          <button class="start-chat">
+            <span class="button-text">开始对话</span>
+            <span class="button-icon">→</span>
+          </button>
+        </div>
+        <div class="image-content">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/ai-robot-assistant-8739360-7150983.png" alt="AI助手" class="ai-image" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,10 +32,20 @@
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 900px;
   width: 100%;
-  text-align: center;
   backdrop-filter: blur(10px);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 1;
 }
 
 .title {
@@ -38,20 +54,27 @@
   color: #333;
 }
 
-.highlight {
-  color: #1e88e5;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
 .description {
-  color: #888;
+  color: #666;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-image {
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.ai-image:hover {
+  transform: scale(1.05);
 }
 
 .start-chat {
@@ -87,8 +110,18 @@
     margin: 1rem;
   }
   
+  .content-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
   .title {
     font-size: 2rem;
+  }
+  
+  .ai-image {
+    max-width: 200px;
+    margin-bottom: 1rem;
   }
 }
 </style> 
