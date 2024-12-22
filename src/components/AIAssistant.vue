@@ -10,9 +10,6 @@
             <span class="button-icon">→</span>
           </button>
         </div>
-        <div class="image-content">
-          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/ai-robot-assistant-8739360-7150983.png" alt="AI助手" class="ai-image" />
-        </div>
       </div>
     </div>
   </div>
@@ -32,20 +29,13 @@
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
+  max-width: 600px;
   width: 100%;
   backdrop-filter: blur(10px);
 }
 
 .content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.text-content {
-  flex: 1;
+  text-align: center;
 }
 
 .title {
@@ -58,23 +48,6 @@
   color: #666;
   margin-bottom: 2rem;
   font-size: 1.2rem;
-}
-
-.image-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ai-image {
-  max-width: 300px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.ai-image:hover {
-  transform: scale(1.05);
 }
 
 .start-chat {
@@ -110,18 +83,8 @@
     margin: 1rem;
   }
   
-  .content-wrapper {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  
   .title {
     font-size: 2rem;
-  }
-  
-  .ai-image {
-    max-width: 200px;
-    margin-bottom: 1rem;
   }
 }
 </style> 
