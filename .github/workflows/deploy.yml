@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -24,16 +24,8 @@ jobs:
       - name: Build project
         run: npm run build
         
-      # 如果需要部署到服务器，可以使用 SSH 部署
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT }}
-          script: |
-            cd /path/to/your/project
-            git pull
-            npm install
-            npm run build 
+          folder: dist  # 构建输出目录，根据您的项目配置可能需要修改
+          branch: gh-pages  # 部署的目标分支
